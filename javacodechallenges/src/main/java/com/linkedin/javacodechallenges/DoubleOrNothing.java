@@ -14,7 +14,7 @@ public class DoubleOrNothing {
       System.out.println("You have " + points + " points.");
       do {
         System.out.println("(d)ouble or (q)uit ?");
-        answer = input.next().charAt(0);
+        answer = input.next().toLowerCase().charAt(0);
       } while (answer != 'd' && answer != 'q');
       if (answer == 'd') {
         if (Math.random() >= 0.5) {
