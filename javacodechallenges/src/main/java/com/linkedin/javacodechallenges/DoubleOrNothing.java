@@ -24,6 +24,7 @@ public class DoubleOrNothing {
                 askUserToContinue();
             } else {
                 printLost();
+                this.current = 0;
                 return;
             }
         }
