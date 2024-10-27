@@ -32,6 +32,6 @@ public class DoubleOrNothing {
 
     }
     System.out.println("You have " + points + " points.");
-    input.close()
+    input.close();
   }
 }
