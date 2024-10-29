@@ -8,12 +8,14 @@ public class App {
     public static double calculateWaterBill(double gallonsUsage) {
         // TODO: Implement method
         final double ccf = 748;
-        double numberCcf = 0;
-        if (gallonsUsage > 2 * ccf) {
-            numberCcf = Math.ceil((gallonsUsage - 2 * ccf) / ccf);
+        double minimumWaterBill = 18.84;
+        double priceExtraCff = 3.90;
+        double numberExtraCcf = 0;
 
+        if (gallonsUsage > 2 * ccf) {
+            numberExtraCcf = Math.ceil((gallonsUsage - 2 * ccf) / ccf);
         }
-        return (18.84 + numberCcf * 3.90);
+        return (minimumWaterBill + numberExtraCcf * priceExtraCff);
 
     }
 
