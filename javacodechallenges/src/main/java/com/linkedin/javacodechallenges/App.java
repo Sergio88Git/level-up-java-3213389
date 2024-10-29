@@ -10,11 +10,12 @@ public class App {
         final double gallonPerCcf = 748;
         final double minimumWaterBill = 18.84;
         final double priceExtraCcf = 3.90;
-        double numberExtraCcf = 0;
+        double numberExtraCcf;
 
         if (gallonsUsage > 2 * gallonPerCcf) {
             numberExtraCcf = Math.ceil((gallonsUsage - 2 * gallonPerCcf) / gallonPerCcf);
-        }
+        } else
+            numberExtraCcf = 0;
         return (minimumWaterBill + numberExtraCcf * priceExtraCcf);
 
     }
