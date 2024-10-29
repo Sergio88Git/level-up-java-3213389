@@ -1,12 +1,20 @@
 package com.linkedin.javacodechallenges;
 
 import java.util.Scanner;
+import java.math.*;
 
 public class App {
 
     public static double calculateWaterBill(double gallonsUsage) {
         // TODO: Implement method
-        return 0;
+        final double ccf = 748;
+        double numberCcf = 0;
+        if (gallonsUsage > 2 * ccf) {
+            numberCcf = Math.ceil((gallonsUsage - 2 * ccf) / ccf);
+
+        }
+        return (18.84 + numberCcf * 3.90);
+
     }
 
     public static void main(String[] args) {
